@@ -6,14 +6,16 @@ I use <b>Java</b> as primary language to solve the problems.
 A daily update will be given on solved problems, please feel free to checkout soltuions and comeup with a better solution if possible. 
 ---
 ## My Team:
-<a href="https://github.com/anudeep-17/Leetcode_DS-ALGO_2023/tree/Anudeep_progress">Anudeep's progress</a> 
+<ul>
+<li><a href="https://github.com/anudeep-17/Leetcode_DS-ALGO_2023/tree/Anudeep_progress">Anudeep's progress</a></li>
+  
+<li><a href="https://github.com/anudeep-17/Leetcode_DS-ALGO_2023/tree/Satwik_progress">Satwik's progress</a></li>
 
-<a href="https://github.com/anudeep-17/Leetcode_DS-ALGO_2023/tree/Satwik_progress">Satwik's progress</a>
+<li><a href="https://github.com/anudeep-17/Leetcode_DS-ALGO_2023/tree/Forum_progress">Forum's progress</a></li>
 
-<a href="https://github.com/anudeep-17/Leetcode_DS-ALGO_2023/tree/Anudeep_progress">Forum's progress</a>
+<li><a href="https://github.com/anudeep-17/Leetcode_DS-ALGO_2023/tree/Dheeraj_progress">Dheeraj's progress</a></li>
 
-<a href="https://github.com/anudeep-17/Leetcode_DS-ALGO_2023/tree/Anudeep_progress">Dheeraj's progress</a>
-
+</ul>
 
 ---
 ## Problems & solutions
