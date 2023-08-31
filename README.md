@@ -8,8 +8,9 @@ A daily update will be given on solved problems, please feel free to checkout so
 ---
 ## Problems & solutions
 
-| # | Title | Solution | White Board Solution | Description | 
-|---| ----- | -------- | ------------- |--------------------- |
+| # | Title | Solution | Description | Problem Link |
+|---| ----- | :--------: | :------------ | :------------ |
+| 1 | Two Sum | [Java](https://github.com/anudeep-17/Leetcode_DS-ALGO_2023/blob/78bda0306e21f98dff5c28c479029acfee540d88/Two%20Sum.java) | Create a Map that stores the difference of each number from the target and the index of that number in the array. Then search for the target in the array, if it's there, then that key value pair is my two sum solution | [Two Sum on Leetcode](https://leetcode.com/problems/two-sum/) |
 
 ---
 ## Resources 
