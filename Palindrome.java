@@ -1,3 +1,4 @@
+// Brute Force
 class Solution {
     public boolean isPalindrome(int x) {
         char[] a = String.valueOf(x).toCharArray();
