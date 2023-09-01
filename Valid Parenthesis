@@ -1,0 +1,26 @@
+# Optimized
+class Solution {
+    public boolean isValid(String s) {
+
+        char[] tempArray = s.toCharArray();
+
+        Stack<Character> stack = new Stack<Character>();
+
+        for( int i = 0; i < tempArray.length; i++){
+            if(!stack.isEmpty()){
+                if((tempArray[i] == '}' && stack.peek() == '{') || 
+                (tempArray[i] == ']' && stack.peek() == '[') ||
+                (tempArray[i] == ')' && stack.peek() == '(')
+                ){
+                    stack.pop();
+                } else {
+                stack.push(tempArray[i]);
+                } 
+            } else {
+                stack.push(tempArray[i]);
+            } 
+        }
+
+        return stack.isEmpty();
+}
+}
