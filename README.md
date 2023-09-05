@@ -15,6 +15,9 @@ A daily update will be given on solved problems, please feel free to checkout so
 | 3 | <a href ="https://leetcode.com/problems/roman-to-integer/description/">Roman to Integer </a> | <a href="https://github.com/anudeep-17/Leetcode_DS-ALGO_2023/blob/Anudeep_progress/RomanToInteger.java">Java Solution</a> |  | If-Else structure | O(n) | the given number will be converted to int from roman | ### |
 | 4 | <a href ="https://leetcode.com/problems/longest-common-prefix/description/">Longest common prefix </a> | <a href="https://github.com/anudeep-17/Leetcode_DS-ALGO_2023/blob/Anudeep_progress/LongestCommonPrefix.java">Java Solution</a> |  | Loop Structures | O(nm) | find the longest common characters among the given strings | <a href="https://www.w3schools.com/java/ref_string_startswith.asp">StartsWith method</a> |
 | 5 | <a href ="https://leetcode.com/problems/valid-parentheses/description/">Valid Parentheses</a> | <a href="https://github.com/anudeep-17/Leetcode_DS-ALGO_2023/blob/Anudeep_progress/Valid-Parenthesis.java">Java Solution</a> |  | Stack | O(n) | find if the parenthesis are in right order and every opening parenthesis have closing. | <a href="https://www.geeksforgeeks.org/stack-class-in-java/">Stack Implementation</a> |
+| 6 | <a href ="https://leetcode.com/problems/merge-two-sorted-lists/description/">Valid Parentheses</a> | <a href="https://github.com/anudeep-17/Leetcode_DS-ALGO_2023/blob/Anudeep_progress/Merge_Two_Sorted_List.java">Java Solution</a> |  | ListNode | O(n) | Merge two linked lists using their head list node | <a href="https://pages.cs.wisc.edu/~mcw/cs367/programs/P5/javadoc/ListNode#:~:text=This%20is%20the%20a%20node,next%20ListNode%20in%20the%20chain">List Node documentation</a> |
+
+
 
 ---
 ## Resources 
