@@ -26,7 +26,7 @@ A daily update will be given on solved problems, please feel free to checkout so
 
 | Rank | Name | Problems solved | 
 |---| ----- |--------------------- |
-| 🥇 | <a href="https://github.com/anudeep-17/Leetcode_DS-ALGO_2023/tree/Satwik_progress">Satwik</a> | 18 |
+| 🥇 | <a href="https://github.com/anudeep-17/Leetcode_DS-ALGO_2023/tree/Satwik_progress">Satwik</a> | 22 |
 | 🥈 | <a href="https://github.com/anudeep-17/Leetcode_DS-ALGO_2023/tree/Anudeep_progress">Anudeep</a> | 12 |
 | 🥉 | <a href="https://github.com/anudeep-17/Leetcode_DS-ALGO_2023/tree/Forum_progress">Dheeraj</a> | 9 |
 | 🏅 | <a href="https://github.com/anudeep-17/Leetcode_DS-ALGO_2023/tree/Dheeraj_progress">Forum</a> | 9 |
