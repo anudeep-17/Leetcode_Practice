@@ -22,7 +22,7 @@ A daily update will be given on solved problems, please feel free to checkout so
 | 10 | <a href ="https://leetcode.com/problems/search-insert-position/">Search Insert Position</a> | <a href="https://github.com/anudeep-17/Leetcode_DS-ALGO_2023/blob/Anudeep_progress/Search_Insert_Position.java">Java Solution</a> |  | Binary search method to find out | O(ln n) | search for a target in array and return its existing or possible index | <a href="https://stackoverflow.com/questions/2307283/what-does-olog-n-mean-exactly">What is Log n</a> <a href="https://www.freecodecamp.org/news/big-o-notation-explained-with-examples">Example algorithms for all O</a> |
 | 11 | <a href ="https://leetcode.com/problems/length-of-last-word/">Length of Last Word</a> | <a href="https://github.com/anudeep-17/Leetcode_DS-ALGO_2023/blob/Anudeep_progress/Length_of_Last_Word.java">Java Solution</a> |  | String usage | O(n) | give the last word length in a string | ### |
 | 12 | <a href ="https://leetcode.com/problems/plus-one/">Plus One</a> | <a href="https://github.com/anudeep-17/Leetcode_DS-ALGO_2023/blob/Anudeep_progress/Plus_One.java">Java Solution</a> |  | Array inplace manipulation | O(n) | given digit array we add one to end of the digits and accordingly edit array. | ### |
-
+| 13 | <a href ="https://leetcode.com/problems/add-binary/">Binary string addition</a> | <a href="https://github.com/anudeep-17/Leetcode_DS-ALGO_2023/blob/Anudeep_progress/Binary_Addition.java">Java Solution</a> |  | String manipulation | O(n) | Add two given binary strings and return result | ### |
 
 ---
 ## Resources 
