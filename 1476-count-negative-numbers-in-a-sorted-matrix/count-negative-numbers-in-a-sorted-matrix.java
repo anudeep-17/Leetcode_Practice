@@ -17,7 +17,6 @@ class Solution {
         int countall = 0;
         for(int i = 0; i<grid.length; i++)
         {
-            System.out.println(Arrays.toString(grid[i]));
             countall += countrownegatives(grid[i]);
         } 
         return countall;
