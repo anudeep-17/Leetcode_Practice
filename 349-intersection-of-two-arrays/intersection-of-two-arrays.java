@@ -2,25 +2,65 @@ import java.util.HashSet;
 import java.util.Set;
 
 class Solution {
+    public boolean BinarySearch(int[] arr, int num)
+    {
+        int left = 0;
+        int right = arr.length - 1;
+        boolean flag = false;
+
+        while(left <= right)
+        {
+            int mid = left + (right - left)/2;
+            
+            if(arr[mid] == num)
+            {
+                flag = true;
+                break;
+            }
+            else if(arr[mid] < num)
+            {
+               left = mid + 1;
+            }
+            else
+            {
+                right = mid - 1;
+            }
+        }
+        return flag;
+    }
+
     public int[] intersection(int[] nums1, int[] nums2) 
     {
-        Set<Integer> uniqueSet1 = new HashSet<>();
-        Set<Integer> uniqueSet2 = new HashSet<>();
+        int[] smallarr = null;
+        int[] largearr = null;
         
-        for (int element : nums1) {
-            uniqueSet1.add(element);
+        if(nums1.length <= nums2.length)
+        {
+            smallarr = nums1;
+            largearr = nums2;
+             
         }
-        for (int element : nums2) {
-            uniqueSet2.add(element);
-        }
-
-        uniqueSet1.retainAll(uniqueSet2);
-        int[] uniqueArray = new int[uniqueSet1.size()];
-        int index = 0;
-        for (int element : uniqueSet1) {
-            uniqueArray[index++] = element;
+        else
+        {
+            smallarr = nums2;
+            largearr = nums1;
         }
 
-        return uniqueArray;
+        Set<Integer> Intersection = new HashSet<>();
+
+        Arrays.sort(largearr);
+
+        for( int i = 0; i < smallarr.length; i++)
+        {
+             
+            if(BinarySearch(largearr, smallarr[i]))
+            {
+               
+                Intersection.add(smallarr[i]);
+            }
+        }
+       return Intersection.stream()
+                .mapToInt(Integer::intValue)
+                .toArray();
     }
 }
