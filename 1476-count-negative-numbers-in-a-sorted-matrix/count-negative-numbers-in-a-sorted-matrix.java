@@ -1,24 +1,28 @@
 class Solution {
-    public int countrownegatives(int[] arr)
+    
+    public int countNegatives(int[][] grid) 
     {
         int count = 0;
-        for(int i = 0; i<arr.length; i++)
+        for(int i = 0; i< grid.length; i++)
         {
-            if(arr[i] < 0)
+            int left = 0;
+            int right = grid[i].length - 1;
+
+            while(left<=right)
             {
-                count = count+1;
+                int mid = left + (right - left)/2;
+                if(grid[i][mid] < 0)
+                {
+                    // it is negative and we might have more to left, but everything to right is negative;
+                    count += right + 1 - mid;
+                    right = mid -1;
+                }
+                else
+                {
+                    left = mid + 1;
+                }
             }
         }
         return count;
-    } 
-
-    public int countNegatives(int[][] grid) 
-    {
-        int countall = 0;
-        for(int i = 0; i<grid.length; i++)
-        {
-            countall += countrownegatives(grid[i]);
-        } 
-        return countall;
     }
 }
