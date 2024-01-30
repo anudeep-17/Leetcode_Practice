@@ -1,62 +1,27 @@
 class Solution {
     public List<Integer> targetIndices(int[] nums, int target) 
     {
-        Arrays.sort(nums);
-        List<Integer> returner  = new ArrayList<Integer>();
+       int nontargetcount = 0;
+       int targetcount = 0;
 
-        int left = 0;
-        int right = nums.length - 1;
-        int lastoccurence = -1;
-        int firstoccurence = -1;
-        
-        while(left <= right)
-        {
-            // last occurence of target
-            int mid = left + (right - left) / 2;
-            if(nums[mid] == target)
-            {
-                lastoccurence = mid;
-                left = mid + 1;
-            }
-            else if(nums[mid] < target)
-            {
-                left = mid + 1;
-            }
-            else
-            {
-                right = mid -1;
-            }
-        }
-        
-        left = 0;
-        right = lastoccurence;
-        while(left <= right)
-        {
-            // First occurence of target
-            int mid = left + (right - left) / 2;
-            if(nums[mid] == target)
-            {
-                firstoccurence = mid;
-                right = mid - 1;
-            }
-            else if(nums[mid] < target)
-            {
-                left = mid + 1;
-            }
-            else
-            {
-                right = mid -1;
-            }
-        }
+       for(int i = 0; i<nums.length; i++)
+       {
+           if(nums[i] == target)
+           {
+               targetcount++;
+           }
+           else if (nums[i] < target)
+           {
+               nontargetcount++;
+           }
+       }
 
-        for(int i = firstoccurence; i<= lastoccurence; i++)
-        {
-            if( i == -1)
-            {
-                break;
-            }
-            returner.add(i);
-        }
-        return returner;
+       List<Integer> returner = new ArrayList<Integer>();
+       for(int i = nontargetcount; i<= targetcount+nontargetcount-1; i++)
+       {
+           returner.add(i);
+       }
+
+       return returner;
     }
 }
