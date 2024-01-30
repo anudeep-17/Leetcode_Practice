@@ -4,7 +4,8 @@ class Solution {
     public int[] kWeakestRows(int[][] mat, int k) 
     {
         int[] returner = new int[k];
-        int[] scores = new int[mat.length];
+        Map<Integer, Integer> rowtosolider = new HashMap<>();
+        PriorityQueue<Integer> numberofsoliders = new PriorityQueue<>();
 
         for(int i = 0; i<mat.length; i++)
         {
@@ -29,14 +30,20 @@ class Solution {
                 }
             }
         
-            scores[i] = (lastoccurence+1) * mat.length + i;
+            rowtosolider.put((lastoccurence+1)*mat.length + i, i);
+            numberofsoliders.add((lastoccurence+1)*mat.length + i);
+            
         }
-        
-        Arrays.sort(scores);
-        for( int i = 0; i<k; i++)
+
+        for(int i = 0; i< k ; i++)
         {
-            returner[i] = scores[i] % mat.length;
+            if(!numberofsoliders.isEmpty())
+            {
+                int value  = numberofsoliders.poll();
+                returner[i] = rowtosolider.get(value);
+            }
         }
+
 
         return returner;
     }
