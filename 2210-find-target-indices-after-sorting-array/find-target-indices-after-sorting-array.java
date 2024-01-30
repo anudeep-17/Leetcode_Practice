@@ -29,7 +29,7 @@ class Solution {
         }
         
         left = 0;
-        right = nums.length - 1;
+        right = lastoccurence;
         while(left <= right)
         {
             // First occurence of target
