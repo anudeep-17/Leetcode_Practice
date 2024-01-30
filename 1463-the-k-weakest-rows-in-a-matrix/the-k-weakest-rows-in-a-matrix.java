@@ -6,6 +6,7 @@ class Solution {
         int[] returner = new int[k];
         Map<Integer, Integer> rowtosolider = new HashMap<>();
         PriorityQueue<Integer> numberofsoliders = new PriorityQueue<>();
+        int[] scores = new int[mat.length];
 
         for(int i = 0; i<mat.length; i++)
         {
@@ -30,28 +31,32 @@ class Solution {
                 }
             }
         
-            rowtosolider.put(i, lastoccurence+1);
-            numberofsoliders.add(lastoccurence+1);
+            scores[i] = (lastoccurence+1) * mat.length + i;
         }
 
 
-        for(int i = 0; i< k ; i++)
+        // for(int i = 0; i< k ; i++)
+        // {
+        //     if(!numberofsoliders.isEmpty())
+        //     {
+        //         int value  = numberofsoliders.poll();
+        //         for (Map.Entry<Integer, Integer> entry : rowtosolider.entrySet()) 
+        //         {
+        //             if (entry.getValue() == value) 
+        //             {
+        //                 returner[i] = entry.getKey();
+        //                 rowtosolider.remove(entry.getKey());
+        //                 break; // Break out of the loop after removing the first occurrence
+        //             }
+        //         }
+        //     }
+        // }
+
+        Arrays.sort(scores);
+        for( int i = 0; i<k; i++)
         {
-            if(!numberofsoliders.isEmpty())
-            {
-                int value  = numberofsoliders.poll();
-                for (Map.Entry<Integer, Integer> entry : rowtosolider.entrySet()) 
-                {
-                    if (entry.getValue() == value) 
-                    {
-                        returner[i] = entry.getKey();
-                        rowtosolider.remove(entry.getKey());
-                        break; // Break out of the loop after removing the first occurrence
-                    }
-                }
-            }
+            returner[i] = scores[i] % mat.length;
         }
-
 
         return returner;
     }
