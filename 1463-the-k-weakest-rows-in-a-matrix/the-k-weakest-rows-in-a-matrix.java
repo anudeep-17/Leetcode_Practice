@@ -30,10 +30,11 @@ class Solution {
                 }
             }
         
-            rowtosolider.put(i, lastoccurence+1);
-            numberofsoliders.add(lastoccurence+1);
-            
+     
+                rowtosolider.put(i, lastoccurence+1);
+                numberofsoliders.add(lastoccurence+1);
         }
+
 
         for(int i = 0; i< k ; i++)
         {
