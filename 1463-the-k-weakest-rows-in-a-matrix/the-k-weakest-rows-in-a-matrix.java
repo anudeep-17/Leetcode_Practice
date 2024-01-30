@@ -30,6 +30,7 @@ class Solution {
             }
         
             scores[i] = (lastoccurence+1) * mat.length + i;
+            System.out.println(scores[i] + " " + lastoccurence + " " + mat.length + " " + i);
         }
         
         Arrays.sort(scores);
