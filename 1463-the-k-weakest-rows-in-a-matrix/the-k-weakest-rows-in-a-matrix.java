@@ -35,17 +35,6 @@ class Solution {
             
         }
 
-        System.out.println("Content of rowToSoldier Map:");
-        for (Map.Entry<Integer, Integer> entry : rowtosolider.entrySet()) {
-            System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
-        }
-
-        // Print the content of the PriorityQueue
-        System.out.println("\nContent of numberOfSoldiers PriorityQueue:");
-        for (Integer soldier : numberofsoliders) {
-            System.out.println("Soldier: " + soldier);
-        }
-
         for(int i = 0; i< k ; i++)
         {
             if(!numberofsoliders.isEmpty())
