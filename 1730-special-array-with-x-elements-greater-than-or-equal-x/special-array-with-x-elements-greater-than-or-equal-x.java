@@ -26,7 +26,6 @@ class Solution {
 
             if(nums.length - firstoccurence == i)
             {
-               System.out.println(i + " " + firstoccurence);
                special = i;
             }
             else
