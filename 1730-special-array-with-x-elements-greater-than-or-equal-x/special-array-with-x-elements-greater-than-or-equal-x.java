@@ -27,6 +27,7 @@ class Solution {
             if(nums.length - firstoccurence == i)
             {
                special = i;
+               break;
             }
             else
             {
