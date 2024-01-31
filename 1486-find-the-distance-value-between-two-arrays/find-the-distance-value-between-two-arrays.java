@@ -20,7 +20,6 @@ class Solution {
             int upperbound = d + arr1[i];
             int left = 0;
             int right = arr2.length-1;
-            System.out.println(lowerbound+"   " + upperbound);
             
             while(left <= right)
             {
