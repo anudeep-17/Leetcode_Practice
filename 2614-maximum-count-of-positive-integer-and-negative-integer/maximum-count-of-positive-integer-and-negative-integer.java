@@ -48,7 +48,6 @@ class Solution {
             }
         }
 
-        System.out.println("Firstoccurence of positive " +  firstpositiveint + " last negative "+ lastnegativeint + " nof zeros " + (firstpositiveint- lastnegativeint - 1));
 
         if(firstpositiveint >= 0 && lastnegativeint >= 0)
         {
