@@ -56,14 +56,17 @@ class Solution {
         }
         else if (firstpositiveint >= 0 && lastnegativeint < 0)
         {
+            // only positive
             return nums.length - firstpositiveint;
         }
         else if(firstpositiveint < 0 && lastnegativeint >= 0)
         {
+            // only negative
             return lastnegativeint+1;
         }
         else
         {
+            // only zeros
             return 0;
         }
     }
