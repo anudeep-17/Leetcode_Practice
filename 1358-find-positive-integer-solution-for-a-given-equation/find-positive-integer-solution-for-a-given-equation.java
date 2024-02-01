@@ -12,19 +12,28 @@
 class Solution {
     public List<List<Integer>> findSolution(CustomFunction customfunction, int z) 
     {
-         List<List<Integer>> returner = new ArrayList<>();
+         List<List<Integer>> returner = new ArrayList<List<Integer>>();
+         int x = 1;
+         int y = 1000;
 
-          for (int i = 1; i <= 500; i++) {
-            for (int j = 1; j <= 500; j++) {
-                if (customfunction.f(i, j) == z) {
-                    List<Integer> pair = new ArrayList<>();
-                    pair.add(i);
-                    pair.add(j);
-
-                    returner.add(pair);
-                }
-            }
-        }
+         while(x <= 1000  && y>0)
+         {
+             int temp = customfunction.f(x,y);
+             if (temp < z)
+             {
+                 x++;
+             }
+             else if(temp > z)
+             {
+                 y--;
+             }
+             else
+             {
+                returner.add(List.of(x, y));
+                x++;
+                y--;
+             }
+         }
 
          return returner;
     }
