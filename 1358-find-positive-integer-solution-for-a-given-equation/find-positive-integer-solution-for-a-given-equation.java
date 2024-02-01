@@ -13,28 +13,31 @@ class Solution {
     public List<List<Integer>> findSolution(CustomFunction customfunction, int z) 
     {
          List<List<Integer>> returner = new ArrayList<List<Integer>>();
-         int x = 1;
-         int y = 1000;
 
-         while(x <= 1000  && y>0)
+         for( int i = 1; i<=1000; i++)
          {
-             int temp = customfunction.f(x,y);
-             if (temp < z)
+             int left = 1;
+             int right = 1000;
+
+             while(left<=right)
              {
-                 x++;
-             }
-             else if(temp > z)
-             {
-                 y--;
-             }
-             else
-             {
-                returner.add(List.of(x, y));
-                x++;
-                y--;
+                 int mid = left + (right - left)/2;
+
+                 if(customfunction.f(i, mid) == z)
+                 {
+                     returner.add(List.of(i,mid));
+                     break;
+                 }
+                 else if(customfunction.f(i, mid) > z)
+                 {
+                     right = mid -1;
+                 }
+                 else
+                 {
+                     left = mid + 1;
+                 }
              }
          }
-
          return returner;
     }
 }
