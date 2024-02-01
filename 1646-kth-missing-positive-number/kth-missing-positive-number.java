@@ -15,10 +15,10 @@ class Solution {
             }
             else
             {
-                left = mid +1;
+                left = mid + 1;
             }
-            
-       
+            System.out.println("left: " + left + ", mid: " + mid + " element at mid: " + arr[mid] +
+                    ", right: " + right);
         }
 
         return left + k;
