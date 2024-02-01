@@ -14,20 +14,17 @@ class Solution {
     {
          List<List<Integer>> returner = new ArrayList<>();
 
-         for(int i = 1; i<=1000; i++)
-         {
-             for(int j = 1; j<=1000; j++)
-             {
-                 if(customfunction.f(i,j) == z)
-                 {
+          for (int i = 1; i <= 500; i++) {
+            for (int j = 1; j <= 500; j++) {
+                if (customfunction.f(i, j) == z) {
                     List<Integer> pair = new ArrayList<>();
                     pair.add(i);
                     pair.add(j);
 
                     returner.add(pair);
-                 }
-             }
-         }
+                }
+            }
+        }
 
          return returner;
     }
