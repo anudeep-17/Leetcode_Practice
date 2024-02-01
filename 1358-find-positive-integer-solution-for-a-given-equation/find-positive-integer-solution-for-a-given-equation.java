@@ -22,13 +22,13 @@ class Solution {
              while(left<=right)
              {
                  int mid = left + (right - left)/2;
-
-                 if(customfunction.f(i, mid) == z)
+                 int comp =customfunction.f(i, mid);
+                 if(comp == z)
                  {
                      returner.add(List.of(i,mid));
                      break;
                  }
-                 else if(customfunction.f(i, mid) > z)
+                 else if(comp > z)
                  {
                      right = mid -1;
                  }
