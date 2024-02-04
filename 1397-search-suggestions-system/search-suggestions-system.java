@@ -30,7 +30,6 @@ class Solution {
         List<List<String>> searchhistory = new ArrayList<List<String>>();
         Arrays.sort(products);
         int first =  FirstOccurenceIndex(products, searchWord.substring(0,0));
-
         for(int j = 0; j< searchWord.length(); j++ )
         {
             List<String>temp = new ArrayList<String>();
