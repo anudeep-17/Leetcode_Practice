@@ -3,17 +3,25 @@ class Solution {
     {   
         int left = 0;
         int right = products.length -1;
-        int firstoccurence = 0;
-
+        int firstoccurence = -1;
         while(left<=right)
         {
             int mid = left + (right - left)/2;
-            if(products[mid].substring(0,0).compareTo(letter) == 0)
+            int length = 0;
+            if(products[mid].length() < letter.length())
+            {
+                length = products[mid].length();
+            }
+            else
+            {
+                length = letter.length();
+            }
+            if(products[mid].substring(0,length).compareTo(letter) == 0)
             {
                 firstoccurence = mid;
                 right = mid - 1;
             }
-            else if(products[mid].substring(0,0).compareTo(letter) < 0)
+            else if(products[mid].substring(0,length).compareTo(letter) < 0)
             {
                 left = mid + 1;
             }
@@ -29,24 +37,31 @@ class Solution {
     {
         List<List<String>> searchhistory = new ArrayList<List<String>>();
         Arrays.sort(products);
-        int first =  FirstOccurenceIndex(products, searchWord.substring(0,0));
-        for(int j = 0; j< searchWord.length(); j++ )
+      
+
+        for(int i = 0; i<searchWord.length(); i++)
         {
-            List<String>temp = new ArrayList<String>();
-            for(int i = first ; i<= products.length -1; i++)
+            ArrayList<String> temp = new ArrayList<>();
+            String target = searchWord.substring(0,i+1);
+            int first =  FirstOccurenceIndex(products, target);
+            
+            if(first < 0)
             {
-                if(products[i].startsWith(searchWord.substring(0,j+1)))
-                {
-                    temp.add(products[i]);
-                }
-                if(temp.size() == 3)
-                {
-                    break;
-                }
+                searchhistory.add(temp);
+                continue;
             }
+
+            temp.add(products[first]);
+
+           for(int j = first+1; j< first+3 && j < products.length; j++)
+            {
+                if(products[j].length() >= target.length() && products[j].startsWith(target))
+                {
+                    temp.add(products[j]);
+                }
+            } 
             searchhistory.add(temp);
         }
-       
  
         return searchhistory;
     }
