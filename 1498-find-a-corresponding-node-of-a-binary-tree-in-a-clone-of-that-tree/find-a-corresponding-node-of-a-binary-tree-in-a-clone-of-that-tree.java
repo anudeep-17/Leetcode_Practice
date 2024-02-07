@@ -11,11 +11,7 @@
 class Solution {
     public final TreeNode getTargetCopy(final TreeNode original, final TreeNode cloned, final TreeNode target) 
     {
-        if(original == null || cloned == null || target == null)
-        {
-            return null;
-        }
-        if(original == target)
+        if(original == null || original == target)
         {
             return cloned;
         }
