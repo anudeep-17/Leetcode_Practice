@@ -16,12 +16,11 @@
 class Solution {
     HashMap<Integer, Integer> map = new HashMap<>();
 
-    public int[] findMode(TreeNode root) 
+    public void helper(TreeNode root)
     {
-
         if(root == null)
         {
-            return null;
+            return;
         }
         
         if(map.get(root.val) == null)
@@ -33,9 +32,14 @@ class Solution {
             map.put(root.val, map.get(root.val) + 1);
         }
 
-        findMode(root.left);
-        findMode(root.right);
+       helper(root.left);
+        helper(root.right);
+    }
 
+    public int[] findMode(TreeNode root) 
+    {
+        
+        helper(root);
         int[] result = new int[map.size()];
         int Max = Integer.MIN_VALUE;
         int count = 0;
