@@ -36,9 +36,9 @@ class Solution {
         findMode(root.left);
         findMode(root.right);
 
-        List<Integer> result = new ArrayList<>();
+        int[] result = new int[map.size()];
         int Max = Integer.MIN_VALUE;
-
+        int count = 0;
         for(Map.Entry<Integer, Integer> entry: map.entrySet())
         {
             int key = entry.getKey();
@@ -47,16 +47,17 @@ class Solution {
             if(value > Max)
             {
                 Max = value;
-                result.clear();
-                result.add(key);
+                result = new int[map.size()];
+                count = 0;
+                result[count++] = key;
             }
             else if( value == Max)
             {
-                result.add(key);
+                result[count++] = key;
             }
         }
          
-        return result.stream().mapToInt(Integer::intValue).toArray();
+        return Arrays.copyOfRange(result, 0, count);
         
     }
 }
