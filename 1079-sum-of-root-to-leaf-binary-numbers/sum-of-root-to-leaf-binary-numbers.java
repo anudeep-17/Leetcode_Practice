@@ -14,30 +14,24 @@
  * }
  */
 class Solution {
-    String currbinary = "";
-    int sum = 0;
-    public int sumRootToLeaf(TreeNode root) 
-    { 
-        if(root == null)
-        {
-            return 0;
-        }
+    public int sumRootToLeaf(TreeNode root) {
+    return sumRootToLeafHelper(root, 0);
+}
 
-        currbinary += root.val+"";
-        if(root.left == null && root.right== null)
-        {
-            if(currbinary.length() >= 1)
-            {
-                sum += Integer.parseInt(currbinary, 2);
-                currbinary = currbinary.substring(0, currbinary.length()-1);
-                return sum;
-            }
-        }
-
-        sumRootToLeaf(root.left);
-        sumRootToLeaf(root.right);
-        currbinary = currbinary.substring(0, currbinary.length()-1);
-        return sum;
-        
+private int sumRootToLeafHelper(TreeNode node, int currentSum) {
+    if (node == null) {
+        return 0;
     }
+    
+    currentSum = (currentSum << 1) + node.val;
+
+    if (node.left == null && node.right == null) {
+        return currentSum;
+    }
+
+    int leftSum = sumRootToLeafHelper(node.left, currentSum);
+    int rightSum = sumRootToLeafHelper(node.right, currentSum);
+
+    return leftSum + rightSum;
+}
 }
